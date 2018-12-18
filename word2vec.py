@@ -106,7 +106,7 @@ class Vocab:
 
     def encode_huffman(self):
         # Build a Huffman tree
-        vocab_size = len(self)
+        vocab_size = len(self.vocab_items)
         count = [t.count for t in self] + [1e15] * (vocab_size - 1)
         parent = [0] * (2 * vocab_size - 2)
         binary = [0] * (2 * vocab_size - 2)
